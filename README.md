@@ -33,4 +33,16 @@ Convolutional networks are simply neural networks that use convolution in place 
 
 
 
+### Padding 
+
+Zero-padding adds zeros around the border of an image.
+
+The main benefits of padding are the following:
+
+1. It allows you to use a CONV layer without necessarily shrinking the height and width of the volumes. This is important for building deeper networks, since otherwise the height/width would shrink as you go to deeper layers. An important special case is the "same" convolution, in which the height/width is exactly preserved after one layer.
+
+2. It helps us keep more of the information at the border of an image. Without padding, very few values at the next layer would be affected by pixels as the edges of an image.
+
+
+
 
